@@ -46,6 +46,23 @@ either of the formats.
   * `.ltlf` and `.pltl` contains original formulae of LTL logic that were used to generate the
     benchmarks.
 
+### Generated formats
+
+You can use `generate_afa_benchmarks.sh` to generate additional formats. Either
+(1) run the script without any parameters (then by default all of our selected
+benchmarks will be transformed), (2) run the script as
+`./generate_afa_benchmarks.sh file.afa` to convert single `.afa` benchmark to
+four selected formats (`.aig`, `.ada`, `.afasat`, `.bisim`), or, (3) run the
+script as `./generate_afa_benchmarks.sh dir` to generate all `*.afa` files
+found in the directory `dir`.
+
+This way, we additionaly support the following formats:
+  * `.aig`: format supported by bwIC3 (a checker based on IC3 algorithm build upon ABC model checker).
+  * `.ada`: format supported by JAltImpact tool, an implementation o finterpolation-based algorithm.
+  * `.afasat`: format supported by Antisat, our own implementation of antichain AFA emptiness test
+    integrated with SAT solver.
+  * `.bisim`: format supported by Bisim, an implementation of the AFA-emptiness check based on bisimulation.
+
 ## File naming conventions 
 
 There are no fixed naming conventions for the benchmarks. We only request to provide the benchmark
