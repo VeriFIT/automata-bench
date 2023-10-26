@@ -39,7 +39,7 @@ either of the formats.
   * `.mata` is our own format (see [AUTOMATAFORMAT.md](https://github.com/VeriFIT/mata/blob/devel/AUTOMATAFORMAT.md))
   for various types of automata (AFA, NFA, DFA ,etc.) 
   * `.afa` is an intermediate format for AFA automata, that can be converted to other AFA formats
-  supported by other tools.
+  supported by other tools (see [v1_checker](https://github.com/p4l1ly/automata-safa/tree/v1_checker)).
   * `.smt2` contains formulae in SMTLIB that are passed to SMT solvers, such as Z3 or CVC5.
   * `.emp` is our own specification of simple programs, that contains automata operations.
   * `gen_aut/` directory contains source automata for `.emp` files
