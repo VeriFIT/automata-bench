@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 CONVERTER="convert-for-checkers.sh"
 
@@ -36,9 +36,8 @@ function teardown {
 trap teardown EXIT
 
 # Iterates over everything and generates other formats
-for directory in "${worklist[@]}"; do
-    echo "Converting benchmarks in $directory"
+for directory in "benchmarks/${worklist[@]}"; do
+    echo "Converting benchmarks in 'benchmarks/${directory}'"
     $CONVERTER $directory
     echo "$directory complete"
 done
-
